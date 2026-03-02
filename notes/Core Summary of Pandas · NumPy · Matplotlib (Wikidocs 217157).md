@@ -64,5 +64,7 @@
 - 목적: 데이터 이해/결과 시각화
 - 라인 플롯 기본
   - `plt.title(...)`, `plt.plot(x, y)`, `plt.show()`
+ 
+Progress: documents/references/PROGRESS.md
 - 축 라벨
   - `plt.xlabel(...)`, `plt.ylabel(...)`
