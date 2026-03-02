@@ -60,3 +60,7 @@
 - 회귀 결과는 w로 나타나고, 예측치는 ŷ_i = w^T x_i 형태
 - 잔차(오차): e_i = y_i - ŷ_i = y_i - w^T x_i
 - 전체 데이터로 묶으면 잔차 벡터 e를 만들고, (표기상) y - Xw 형태로 간단히 표현 가능
+
+
+
+Progress: documents/references/PROGRESS.md
