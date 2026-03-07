@@ -2,8 +2,10 @@
 
 ## Wikidocs
 - Source: https://wikidocs.net/217157
-- Done: 01-04 pandas, numpy, matplotlib
-- Next: 01-05 데이터의 분리(Splitting Data)
+- Done: 01-05 데이터의 분리(Splitting Data)
+  + 01-06 runpod.io
+     runpod 회원가입 완료, 추후 LLM 실습 시 지불 후 GPU 클라우드 이용 가능
+- Next: 02-01 pytorch 기초
 
 ## DataScienceSchool
 - Source: https://datascienceschool.net/02%20mathematics/02.02%20%EB%B2%A1%ED%84%B0%EC%99%80%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%97%B0%EC%82%B0.html
