@@ -1,7 +1,7 @@
 # Study References Progress
 
 ## Wikidocs
-- Source: https://wikidocs.net/217157
+- Source: https://wikidocs.net/52460
 - Done: 02-02 Tensor Manipulation
   pytorch에 대해 알아보고 tensor를 다루는 기본 연산들을 학습함  
 - Next: 02-03 파이썬 클래스, 03-01 ML 기초
