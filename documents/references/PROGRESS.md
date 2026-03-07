@@ -2,9 +2,18 @@
 
 ## Wikidocs
 - Source: https://wikidocs.net/52460
-- Done: 02-02 Tensor Manipulation
-  pytorch에 대해 알아보고 tensor를 다루는 기본 연산들을 학습함  
-- Next: 02-03 파이썬 클래스, 03-01 ML 기초
+- Done:
+- 2026_03_02:
+    01-04 pandas, numpy, matplotlib
+    01-05 데이터의 분리(Splitting Data)
+  + 01-06 runpod.io
+     runpod 회원가입 완료, 추후 LLM 실습 시 지불 후 GPU 클라우드 이용 가능
+- 2026_03_07:
+    02. pytorch 기초
+    02-02 Tensor Manipulation
+    02-03 파이썬 클래스
+  pytorch에 대해 알아보고 tensor를 다루는 기본 연산들을 학습함 
+- Next: 03-01 ML 기초
   
 + 01-06 runpod.io
      runpod 회원가입 완료, 추후 LLM 실습 시 지불 후 GPU 클라우드 이용 가능
