@@ -1,7 +1,7 @@
 # Study References Progress
 
 ## Wikidocs
-- Source: https://wikidocs.net/52460
+- Source: https://wikidocs.net/54841
 - Done:
 - 2026_03_02:
     01-04 pandas, numpy, matplotlib
@@ -12,8 +12,10 @@
     02. pytorch 기초
     02-02 Tensor Manipulation
     02-03 파이썬 클래스
-  pytorch에 대해 알아보고 tensor를 다루는 기본 연산들을 학습함 
-- Next: 03-01 ML 기초
+  pytorch에 대해 알아보고 tensor를 다루는 기본 연산들을 학습함
+- 2026_03_08:
+    03-01 선형 회귀와 자동 미분(Linear Regression and Autograd)
+- Next: 03-02 다중 선형 회귀(Multivariable Linear regression)
   
 + 01-06 runpod.io
      runpod 회원가입 완료, 추후 LLM 실습 시 지불 후 GPU 클라우드 이용 가능
