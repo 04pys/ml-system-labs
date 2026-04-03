@@ -9,7 +9,7 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
 https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관한 docs를, 복습 트리거로 활용할 수 있도록 요약 정리해줘. 다음 내 메모를 활용하여 내가 다시 보기 편하도록 핵심 내용을 잘 정리해줘.
 
 ## Wikidocs
-- Source: https://wikidocs.net/217269
+- Source: https://wikidocs.net/58686
 - Done:
 - 2026_03_02:
     01-04 pandas, numpy, matplotlib
@@ -33,7 +33,9 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
 - 2026_03_28:
       03-04 미니배치와 DataLoader
       03-05 의 5. 샘플(samples)과 특성(feature)부터 다음시간에 이어서 하면댐
-- Next: 03-05 벡터와 행렬 연산 복습의 5.샘플과 특성
+- 2026_04_03:
+      04-01 Logistic Regression - 로지스틱 회귀의 hypothesis, cost 함수를 구하는 방법과 W,b를 업데이트하는 방법을 공부한 뒤 pytorch로 직접 구현해봄
+- Next: nn.Module과 클래스로 구현하는 로지스틱 회귀
   
 ## DataScienceSchool
 - Source: https://datascienceschool.net/02%20mathematics/02.02%20%EB%B2%A1%ED%84%B0%EC%99%80%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%97%B0%EC%82%B0.html
