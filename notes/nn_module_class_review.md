@@ -14,8 +14,8 @@
 
 - `nn.Linear`가 파라미터를 어떻게 들고 있는지 이해하고
 - `model.parameters()`가 왜 중요한지 확인하고
-- `forward`:contentReference[oaicite:0]{index=0}다시 연결하고
-- 나아가 **PyTorch 모델을 클래스로 만드는 기본 형식**을 익히는 실습이었다. :contentReference[oaicite:1]{index=1}
+- `forward`와 학습 루프가 어떻게 다시 연결되는지 이해하고
+- 나아가 **PyTorch 모델을 클래스로 만드는 기본 형식**을 익히는 실습이었다.
 
 ---
 
@@ -30,12 +30,15 @@
 PyTorch에서는 이것을 직접 `W`, `b`를 선언해서 만들 수도 있지만, 이번 실습에서는 다음처럼 더 간단히 만들었다.
 
 ```python
-model = nn.Linear(1, 1:contentReference[oaicite:2]{index=2}미는 다음과 같다.
+model = nn.Linear(1, 1)
+```
+
+의미는 다음과 같다.
 
 - 입력 차원: 1
 - 출력 차원: 1
 
-즉, `x` 하나를 받아서 `y` 하나를 예측하는 구조라는 뜻이다. :contentReference[oaicite:3]{index=3}
+즉, `x` 하나를 받아서 `y` 하나를 예측하는 구조라는 뜻이다.
 
 ### 복습 트리거
 
@@ -52,7 +55,9 @@ model = nn.Linear(1, 1:contentReference[oaicite:2]{index=2}미는 다음과 같�
 - 첫 번째: `weight`
 - 두 번째: `bias`
 
-실습에서는 `list(model.parame:contentReference[oaicite:4]{index=4}은 랜덤이며, 둘 다 `requires_grad=True` 상태였다. 이는 두 값이 경사 하강법으로 업데이트될 대상이라는 뜻이다. :contentReference[oaicite:5]{index=5}
+실습에서는 `list(model.parameters())`를 통해 이들을 직접 확인할 수 있었다.
+
+초기값은 랜덤이며, 둘 다 `requires_grad=True` 상태였다. 이는 두 값이 경사 하강법으로 업데이트될 대상이라는 뜻이다.
 
 ### 복습 트리거
 
@@ -80,13 +85,15 @@ optimizer.step()
 
 이 5줄은 정말 중요하다.
 
-:contentReference[oaicite:6]{index=6}model(x_train)`
+### (1) `prediction = model(x_train)`
 
 입력 `x_train`을 모델에 넣어서 예측값을 얻는다.  
-이것이 **forward 연산**이다. :contentReference[oaicite:7]{index=7}
+이것이 **forward 연산**이다.
 
-### (2) `cost = F.:contentReference[oaicite:8]{index=8}제값의 차이를 평균 제곱 오차로 계산한다.  
-즉, “지금 모델이 얼마나 틀렸는가”를 수치로 만든다. :contentReference[oaicite:9]{index=9}
+### (2) `cost = F.mse_loss(prediction, y_train)`
+
+예측값과 실제값의 차이를 평균 제곱 오차로 계산한다.  
+즉, “지금 모델이 얼마나 틀렸는가”를 수치로 만든다.
 
 ### (3) `optimizer.zero_grad()`
 
@@ -94,10 +101,10 @@ optimizer.step()
 
 PyTorch는 gradient를 자동으로 **누적(accumulate)** 하기 때문에, 이전 step의 gradient를 지우지 않으면 계속 더해진다. 그래서 매 step마다 먼저 0으로 비워줘야 한다.
 
-###:contentReference[oaicite:10]{index=10}
+### (4) `cost.backward()`
 
 비용 함수 `cost`를 기준으로 각 파라미터에 대한 기울기(미분값)를 계산한다.  
-이것이 **backward 연산**이다. :contentReference[oaicite:11]{index=11}
+이것이 **backward 연산**이다.
 
 ### (5) `optimizer.step()`
 
@@ -127,12 +134,12 @@ PyTorch는 gradient를 자동으로 **누적(accumulate)** 하기 때문에, 이
 
 에 가까워야 한다.
 
-학습 전에는 `W`, `b`가 랜덤이지만, 반복 학습을 거치면서 cos:contentReference[oaicite:12]{index=12}으로
+학습 전에는 `W`, `b`가 랜덤이지만, 반복 학습을 거치면서 cost가 줄어들고 그 결과 점점
 
 - `W`는 2에 가깝게
 - `b`는 0에 가깝게
 
-수렴했다. 또한 `x=4`를 넣었을 때 예측값이 8에 매우 가까워졌다. :contentReference[oaicite:13]{index=13}
+수렴했다. 또한 `x=4`를 넣었을 때 예측값이 8에 매우 가까워졌다.
 
 ### 복습 트리거
 
@@ -157,7 +164,8 @@ PyTorch는 gradient를 자동으로 **누적(accumulate)** 하기 때문에, 이
 
 PyTorch에서는 이것을 다음처럼 표현했다.
 
-```py:contentReference[oaicite:14]{index=14}(3, 1)
+```python
+model = nn.Linear(3, 1)
 ```
 
 즉,
@@ -166,7 +174,9 @@ PyTorch에서는 이것을 다음처럼 표현했다.
 - 출력 차원 1
 
 이라는 뜻이다.  
-여기서는 weight도 3개를 가지게 된다. :contentReference[oaicite:15]{index=15}:contentReference[oaicite:16]{index=16}또한 학습률을 `0.01`이 아니라 `1e-5` 정도로 낮췄는데, 이는 너무 큰 학습률을 쓰면 기울기가 발산할 수 있기 때문이다. :contentReference[oaicite:17]{index=17}
+여기서는 weight도 3개를 가지게 된다.
+
+또한 학습률을 `0.01`이 아니라 `1e-5` 정도로 낮췄는데, 이는 너무 큰 학습률을 쓰면 기울기가 발산할 수 있기 때문이다.
 
 ### 복습 트리거
 
@@ -194,8 +204,9 @@ class LinearRegressionModel(nn.Module):
 
 ```python
 model = LinearRegressionModel()
-:contentReference[oaicite:18]{index=18}  
-이 형식은 PyTorch에서 매우 표준적인 모델 정의 방식이다. 위키독스도 이 형식을 반드시 숙지할 필요가 있다고 설명한다. :contentReference[oaicite:19]{index=19}
+```
+
+이 형식은 PyTorch에서 매우 표준적인 모델 정의 방식이다. 위키독스도 이 형식을 반드시 숙지할 필요가 있다고 설명한다.
 
 ---
 
@@ -322,7 +333,8 @@ def forward(self, x):
 입력이 들어왔을 때 어떤 계산을 할지 정의
 
 ### `model(x)`
-겉으로는 이렇게 쓰지만 내부적으로는:contentReference[oaicite:20]{index=20}스도 다중 선형 회귀 부분에서 `model(x_train)`은 `model.forward(x_train)`와 동일하다고 설명한다. :contentReference[oaicite:21]{index=21}
+겉으로는 이렇게 쓰지만 내부적으로는 `model.forward(x)` 호출과 연결된다.  
+위키독스도 다중 선형 회귀 부분에서 `model(x_train)`은 `model.forward(x_train)`와 동일하다고 설명한다.
 
 ---
 
