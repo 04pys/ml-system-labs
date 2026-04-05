@@ -29,7 +29,7 @@
 
 PyTorch에서는 이것을 직접 `W`, `b`를 선언해서 만들 수도 있지만, 이번 실습에서는 다음처럼 더 간단히 만들었다.
 
-abcpython
+```python
 model = nn.Linear(1, 1:contentReference[oaicite:2]{index=2}미는 다음과 같다.
 
 - 입력 차원: 1
@@ -69,14 +69,14 @@ model = nn.Linear(1, 1:contentReference[oaicite:2]{index=2}미는 다음과 같�
 
 실습의 학습 코드는 다음 순서로 흘러갔다.
 
-abcpython
+```python
 prediction = model(x_train)
 cost = F.mse_loss(prediction, y_train)
 
 optimizer.zero_grad()
 cost.backward()
 optimizer.step()
-abc
+```
 
 이 5줄은 정말 중요하다.
 
@@ -157,8 +157,8 @@ PyTorch는 gradient를 자동으로 **누적(accumulate)** 하기 때문에, 이
 
 PyTorch에서는 이것을 다음처럼 표현했다.
 
-abcpy:contentReference[oaicite:14]{index=14}(3, 1)
-abc
+```py:contentReference[oaicite:14]{index=14}(3, 1)
+```
 
 즉,
 
@@ -180,7 +180,7 @@ abc
 
 실습의 가장 중요한 부분 중 하나는 다음 코드였다.
 
-abcpython
+```python
 class LinearRegressionModel(nn.Module):
     def __init__(self):
         super().__init__()
@@ -188,11 +188,11 @@ class LinearRegressionModel(nn.Module):
 
     def forward(self, x):
         return self.linear(x)
-abc
+```
 
 그리고
 
-abcpython
+```python
 model = LinearRegressionModel()
 :contentReference[oaicite:18]{index=18}  
 이 형식은 PyTorch에서 매우 표준적인 모델 정의 방식이다. 위키독스도 이 형식을 반드시 숙지할 필요가 있다고 설명한다. :contentReference[oaicite:19]{index=19}
@@ -239,9 +239,9 @@ PyTorch가 모델을 **정식 신경망 모듈로 관리**할 수 있게 하는 
 
 다음 코드가 있다고 하자.
 
-abcpython
+```python
 self.linear = nn.Linear(1, 1)
-abc
+```
 
 이 코드가 단순한 파이썬 속성 저장으로 끝나지 않고,  
 PyTorch가 **“아, 이건 이 모델의 하위 레이어구나”**라고 인식하게 하려면 `nn.Module`의 초기화가 선행되어 있어야 한다.
@@ -267,33 +267,33 @@ PyTorch가 **“아, 이건 이 모델의 하위 레이어구나”**라고 인�
 
 ## 11. 한 줄씩 다시 읽는 클래스 코드
 
-abcpython
+```python
 class LinearRegressionModel(nn.Module):
-abc
+```
 
 - `nn.Module`을 상속받음
 - 즉, 이 클래스는 PyTorch 모델의 규칙을 따름
 
-abcpython
+```python
 def __init__(self):
     super().__init__()
-abc
+```
 
 - 객체 생성 시 부모 클래스 초기화
 - `nn.Module`의 내부 관리 구조 세팅
 
-abcpython
+```python
 self.linear = nn.Linear(1, 1)
-abc
+```
 
 - 선형 레이어 하나를 생성
 - 입력 1개, 출력 1개
 - 이 레이어는 `self.linear`라는 하위 모듈로 등록됨
 
-abcpython
+```python
 def forward(self, x):
     return self.linear(x)
-abc
+```
 
 - 입력 `x`가 들어오면 선형 레이어를 통과시켜 결과 반환
 - 즉, 모델의 실제 계산식을 정의하는 부분
