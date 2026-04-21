@@ -9,7 +9,7 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
 https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관한 docs를, 복습 트리거로 활용할 수 있도록 요약 정리해줘. 다음 내 메모를 활용하여 내가 다시 보기 편하도록 핵심 내용을 잘 정리해줘.
 
 ## Wikidocs
-- Source: https://wikidocs.net/60575
+- Source: https://wikidocs.net/60324
 - Done:
 - 2026_03_02:
     01-04 pandas, numpy, matplotlib
@@ -39,7 +39,9 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
       04-02 nn.Module과 class로 구현하는 로지스틱 회귀 수행.
       05-01 원핫 인코딩 - Multi-class Regression에서 class의 개수만큼 차원을 가지면서 각 선택지의 인덱스는 1, 나머지는 0인 벡터로 만드는 방법이다
       05-02 소프트맥스 회귀 - 소프트맥스 회귀 및 손실함수에 대해 배움
-- Next: 05-03 소프트맥스 구현하기(코랩에 적힌것부터 보기, 헷갈리면 걍 첨부터 다시 ㄱㄱ)
+- 2026_04_21:
+      05-03 소프트맥스 회귀 다양하게 구현하기 - 로우 레벨 구현, F.cross_entropy 활용, nn.Module 활용 방법으로 Softmax Regression 구현하기 
+- Next: 05-04 05-04 소프트맥스 회귀로 MNIST 데이터 분류하기_코랩부터 만들면 됨
   
 ## DataScienceSchool
 - Source: https://datascienceschool.net/02%20mathematics/02.02%20%EB%B2%A1%ED%84%B0%EC%99%80%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%97%B0%EC%82%B0.html
