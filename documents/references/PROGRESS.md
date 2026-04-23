@@ -9,7 +9,7 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
 https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관한 docs를, 복습 트리거로 활용할 수 있도록 요약 정리해줘. 다음 내 메모를 활용하여 내가 다시 보기 편하도록 핵심 내용을 잘 정리해줘.
 
 ## Wikidocs
-- Source: https://wikidocs.net/60324
+- Source: https://wikidocs.net/60021
 - Done:
 - 2026_03_02:
     01-04 pandas, numpy, matplotlib
@@ -43,7 +43,9 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
       05-03 소프트맥스 회귀 다양하게 구현하기 - 로우 레벨 구현, F.cross_entropy 활용, nn.Module 활용 방법으로 Softmax Regression 구현하기
 - 2026_04_23:
       05-04 소프트맥스 회귀로 MNIST 데이터 분류하기 - 소프트맥스 회귀와 PyTorch 기본 흐름으로 MNIST 분류 실습하기
+      06-01 머신러닝 정리하기 - 6. 과적합(Overfitting)과 과소 적합(Underfitting) 까지 공부함
 - Next: 06. [DL 입문] - 인공 신경망(Artificial Neural Network)
+          06-01 머신러닝 정리하기 - 7. 비선형 활성화 함수 부터 공부하면 됨
   
 ## DataScienceSchool
 - Source: https://datascienceschool.net/02%20mathematics/02.02%20%EB%B2%A1%ED%84%B0%EC%99%80%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%97%B0%EC%82%B0.html
