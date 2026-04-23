@@ -40,8 +40,10 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
       05-01 원핫 인코딩 - Multi-class Regression에서 class의 개수만큼 차원을 가지면서 각 선택지의 인덱스는 1, 나머지는 0인 벡터로 만드는 방법이다
       05-02 소프트맥스 회귀 - 소프트맥스 회귀 및 손실함수에 대해 배움
 - 2026_04_21:
-      05-03 소프트맥스 회귀 다양하게 구현하기 - 로우 레벨 구현, F.cross_entropy 활용, nn.Module 활용 방법으로 Softmax Regression 구현하기 
-- Next: 05-04 05-04 소프트맥스 회귀로 MNIST 데이터 분류하기_코랩부터 만들면 됨
+      05-03 소프트맥스 회귀 다양하게 구현하기 - 로우 레벨 구현, F.cross_entropy 활용, nn.Module 활용 방법으로 Softmax Regression 구현하기
+- 2026_04_23:
+      05-04 소프트맥스 회귀로 MNIST 데이터 분류하기 - 소프트맥스 회귀와 PyTorch 기본 흐름으로 MNIST 분류 실습하기
+- Next: 06. [DL 입문] - 인공 신경망(Artificial Neural Network)
   
 ## DataScienceSchool
 - Source: https://datascienceschool.net/02%20mathematics/02.02%20%EB%B2%A1%ED%84%B0%EC%99%80%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%97%B0%EC%82%B0.html
