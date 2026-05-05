@@ -9,7 +9,7 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
 https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관한 docs를, 복습 트리거로 활용할 수 있도록 요약 정리해줘. 다음 내 메모를 활용하여 내가 다시 보기 편하도록 핵심 내용을 잘 정리해줘.
 
 ## Wikidocs
-- Source: https://wikidocs.net/60751
+- Source: https://wikidocs.net/60690
 - Done:
 - 2026_03_02:
     01-04 pandas, numpy, matplotlib
@@ -49,7 +49,11 @@ https://wikidocs.net/000000 이제 위의 선형 회귀와 자동 미분에 관�
       06-04 역전파(BackPropagation) - 역전파를 통한 파라미터 업데이트 과정 수식으로 이해하기
 - 2026_05_01:
       06-05, 06-06 MLP로 손글씨 분류하기
-- Next: 06-07 과적합을 막는 방법들
+- 2026_5_02:
+      06-07 Overfitting
+- 2026_05_05:
+      06-08 기울기 소실(Gradient Vanishing)과 폭주(Exploding)
+- Next: 07-01 순환 신경망(Recurrent Neural Network, RNN)
   
 ## DataScienceSchool
 - Source: https://datascienceschool.net/02%20mathematics/02.02%20%EB%B2%A1%ED%84%B0%EC%99%80%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%97%B0%EC%82%B0.html
